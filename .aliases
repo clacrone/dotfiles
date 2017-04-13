@@ -1,5 +1,28 @@
 #!/usr/bin/env bash
 
+alias ccat='pygmentize -g'
+alias odin="tabname odin;ssh -fNL 2009:127.0.0.1:2009 lacronec.aka.corp.amazon.com"
+alias tunnel='ssh -n -L 2009:localhost:2009 lacronec.aka.corp.amazon.com'
+alias bb='brazil-build'
+alias mcurl="curl --cert `whoami`"
+alias ls='ls -G'
+alias ll='ls -hl'
+alias l='ls -A'
+alias dev='cd ~/Documents/Workspace'
+alias grep="grep --color=auto"
+
+alias tw='open -a /Applications/TextWrangler.app'
+alias pycharm='open -a /Applications/PyCharm\ CE.app'
+alias intel='open -a /Applications/IntelliJ\ IDEA\ CE.app'
+alias eclipse='open -a /Applications/eclipse/eclipse'
+alias subl='open -a /Applications/Sublime\ Text.app'
+
+alias gg="git log --graph --oneline --decorate --date=relative --all"
+alias sshdev='ssh lacronec.aka.corp.amazon.com'
+alias sshbjs="/usr/local/bin/mssh -A bastion-bjs.amazon.com"
+alias sshzhy="/usr/local/bin/mssh -A bastion-zhy.amazon.com"
+alias sshpdf="/usr/local/bin/mssh -A bastion-pdt.amazon.com"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -9,10 +32,11 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+# alias d="cd ~/Documents/Dropbox"
+alias w="cd ~/Documents/Workspace"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+# alias p="cd ~/projects"
 alias g="git"
 alias h="history"
 alias j="jobs"

@@ -46,3 +46,18 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+export PATH=$PATH:/usr/local/bin  # MIDWAY PATH: Path changed for ssh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Documents/Workspace
+source /usr/local/bin/virtualenvwrapper.sh
+source ~/.bash_aliases
+source ~/.git-prompt.sh
+
+# AWS Credentials
+[[ -f ~/.bash_aws ]] && . ~/.bash_aws

@@ -1,4 +1,15 @@
+[user]
+	email = lacronec@amazon.com
+	name = LaCrone
+[amazon]
+	append-cr-url = true
+	pull-request-by-default = true
+
 [alias]
+
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%C    reset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -84,8 +95,11 @@
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
+	excludefile = /Users/lacronec/.config/git/excludes
 	attributesfile = ~/.gitattributes
+	pager = less -FMRiX
+	autocrlf = input
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -128,7 +142,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	#gpgsign = true
 
 [diff]
 
@@ -137,6 +151,10 @@
 	# Enable an experimental heuristic that shifts the hunk boundary in an
 	# attempt to make the resulting patch easier to read.
 	indentHeuristic = true
+	tool = diffmerge
+
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 
 [diff "bin"]
 
@@ -152,13 +170,18 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = diffmerge
+
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
 
 [push]
 
 	# Use the Git 1.x.x default to avoid errors on machines with old Git
 	# installations. To use `simple` instead, add this to your `~/.extra` file:
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
-	default = matching
+	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
