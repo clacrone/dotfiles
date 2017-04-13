@@ -10,6 +10,7 @@ alias ll='ls -hl'
 alias l='ls -A'
 alias dev='cd ~/Documents/Workspace'
 alias grep="grep --color=auto"
+alias diskusage='du . | sort -nr | head -n10'
 
 alias tw='open -a /Applications/TextWrangler.app'
 alias pycharm='open -a /Applications/PyCharm\ CE.app'

@@ -51,8 +51,12 @@ export PATH=$PATH:/usr/local/bin  # MIDWAY PATH: Path changed for ssh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
+export JAVA_HOME=/apollo/env/envImprovement/jdk1.8
 export PATH=$JAVA_HOME/bin:$PATH
+# User specific environment and startup programs
+export PATH="/apollo/env/SDETools/bin:$PATH"
+PATH=$PATH:$HOME/bin:/apollo/env/envImprovement/bin:/apollo/env/AmazonAwsCli/bin
+export PATH
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Documents/Workspace
 source /usr/local/bin/virtualenvwrapper.sh
