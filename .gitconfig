@@ -7,6 +7,32 @@
 
 [alias]
 
+	# Posting another revision of your code review?
+	recommit = "commit --amend --no-edit"
+
+	# Need to undo your most recent commit while keep the files?
+	undo = "reset HEAD~1"
+
+	# Need to completely blow away the most recent commit?
+	abort = "reset --hard HEAD"
+
+	# Easily remove a file from the staging area.
+	unstage = "reset HEAD --"​​
+
+	# Pretty git log for the current branch
+	lol = "log --graph --decorate --pretty=oneline --abbrev-commit"
+
+	# Pretty git log for all branches
+	lola = "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+
+	# An easy way to ignore local changes to files that have already been checked into the repo.
+	assume = "update-index --assume-unchanged"
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+	unassume = "update-index --no-assume-unchanged"
+
+	# Useful for running a git command in a folder that contains multiple repos, like the src folder of your workspace.
+	all = "!f() { ls | xargs -I{} git -C {} $1; }; f"
+
 	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%C    reset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
