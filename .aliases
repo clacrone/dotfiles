@@ -12,8 +12,8 @@ alias dev='cd ~/Documents/Workspace'
 alias grep="grep --color=auto"
 
 alias tw='open -a /Applications/TextWrangler.app'
-alias pycharm='open -a /Applications/PyCharm\ CE.app'
-alias intel='open -a /Applications/IntelliJ\ IDEA\ CE.app'
+alias pycharm='open -a /Applications/PyCharm.app'
+alias intel='open -a /Applications/IntelliJ\ IDEA.app'
 alias eclipse='open -a /Applications/eclipse/eclipse'
 alias subl='open -a /Applications/Sublime\ Text.app'
 
