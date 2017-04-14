@@ -23,6 +23,7 @@ alias sshdev='ssh lacronec.aka.corp.amazon.com'
 alias sshbjs="/usr/local/bin/mssh -A bastion-bjs.amazon.com"
 alias sshzhy="/usr/local/bin/mssh -A bastion-zhy.amazon.com"
 alias sshpdf="/usr/local/bin/mssh -A bastion-pdt.amazon.com"
+alias httpserver = 'python -m SimpleHTTPServer 8910'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
