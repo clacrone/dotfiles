@@ -53,6 +53,7 @@ export PATH=$PATH:/usr/local/bin  # MIDWAY PATH: Path changed for ssh
 export PATH="/usr/local/heroku/bin:$PATH"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
+export PATH="/apollo/env/SDETools/bin:$PATH"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Documents/Workspace
 source /usr/local/bin/virtualenvwrapper.sh
