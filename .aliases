@@ -4,6 +4,7 @@ alias ccat='pygmentize -g'
 alias odin="tabname odin;ssh -fNL 2009:127.0.0.1:2009 lacronec.aka.corp.amazon.com"
 alias tunnel='ssh -n -L 2009:localhost:2009 lacronec.aka.corp.amazon.com'
 alias bb='brazil-build'
+alias sam='brazil-build-tool-exec sam'
 alias mcurl="curl --cert `whoami`"
 alias ls='ls -G'
 alias ll='ls -hl'
